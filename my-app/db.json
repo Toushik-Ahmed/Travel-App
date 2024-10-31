@@ -1,0 +1,100 @@
+{
+  "user": [
+    {
+      "id": "8006",
+      "username": "pronoy",
+      "password": "1234",
+      "email": "p@gmail.com"
+    }
+  ],
+  "itineraries": [
+    {
+      "id": "dfsZH_POEHnofEVQe2BnT",
+      "tripName": "India Tour",
+      "startDate": "2024-10-15",
+      "endDate": "2024-10-19",
+      "destinations": [
+        "gate of india",
+        "taj mahal"
+      ],
+      "description": "india tour 2024",
+      "category": "historical",
+      "activities": {
+        "gate of india": [
+          "see the gate"
+        ],
+        "taj mahal": [
+          "wacth the tomb"
+        ]
+      },
+      "userId": "8006"
+    },
+    {
+      "id": "UXYVsYe3lS9ezdvnrZkHW",
+      "tripName": "Pakistan Tour",
+      "startDate": "2024-11-22",
+      "endDate": "2024-11-22",
+      "destinations": [
+        "Kashmir",
+        "Lahore Fort"
+      ],
+      "description": "pakistan tour 2025",
+      "category": "entertainment",
+      "activities": {
+        "Kashmir": [
+          "enjoy the view"
+        ],
+        "Lahore Fort": [
+          "learn history"
+        ]
+      },
+      "userId": "8006"
+    }
+  ],
+  "summary": [
+    {
+      "id": "000f",
+      "tripName": "India Tour",
+      "description": "india tour 2024",
+      "category": "historical",
+      "activities": {
+        "gate of india": [
+          "see the gate"
+        ],
+        "taj mahal": [
+          "wacth the tomb"
+        ]
+      },
+      "destinations": [
+        "gate of india",
+        "taj mahal"
+      ],
+      "startDate": "2024-10-15",
+      "endDate": "2024-10-19",
+      "cost": "60000",
+      "travelledDistance": "1200km",
+      "summary": "it was a good tour"
+    }
+  ],
+  "budgets": [
+    {
+      "id": "f498",
+      "budget": "5000",
+      "expense": "500",
+      "category": "Food",
+      "tripId": "UXYVsYe3lS9ezdvnrZkHW"
+    },
+    {
+      "id": "e415",
+      "budget": "1000",
+      "expense": "100",
+      "category": "Rent"
+    },
+    {
+      "id": "e48c",
+      "budget": "1000",
+      "expense": "500",
+      "category": "shoping"
+    }
+  ]
+}
