@@ -20,9 +20,19 @@ const Budget = ({ budgetId }: Props) => {
     (state: RootState) => state.budget.budgets
   );
 
+  const totalBudget = budgetInformation.reduce(
+    (total, budget) => total + Number(budget.budget),
+    0
+  );
+  const totalExpense = budgetInformation.reduce(
+    (total, budget) => total + Number(budget.expense),
+    0
+  );
+
   return (
     <div className="mt-8 w-[50%]">
-      <h1 className="text-center ">Budget vs Expense table </h1>
+      <h1 className="text-center font-bold  ">Budget vs Expense Table </h1>
+
       <div className="flex justify-end mr-10 -scroll-mb-6">
         <DialogDemo
           variant="default"
@@ -31,7 +41,11 @@ const Budget = ({ budgetId }: Props) => {
         />
       </div>
       <div className="mt-8">
-        <TableComp budgets={budgetInformation} />
+        <TableComp
+          budgets={budgetInformation}
+          totalBudget={totalBudget}
+          totalExpense={totalExpense}
+        />
       </div>
     </div>
   );

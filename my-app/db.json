@@ -78,23 +78,25 @@
   ],
   "budgets": [
     {
-      "id": "f498",
+      "id": "0c00",
       "budget": "5000",
-      "expense": "500",
+      "expense": "1500",
       "category": "Food",
       "tripId": "UXYVsYe3lS9ezdvnrZkHW"
     },
     {
-      "id": "e415",
-      "budget": "1000",
-      "expense": "100",
-      "category": "Rent"
+      "budget": "6000",
+      "expense": "60",
+      "category": "Rent",
+      "tripId": "UXYVsYe3lS9ezdvnrZkHW",
+      "id": "146d"
     },
     {
-      "id": "e48c",
-      "budget": "1000",
-      "expense": "500",
-      "category": "shoping"
+      "budget": "15000",
+      "expense": "2000",
+      "category": "shoping",
+      "tripId": "UXYVsYe3lS9ezdvnrZkHW",
+      "id": "b032"
     }
   ]
 }

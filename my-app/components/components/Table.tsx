@@ -3,6 +3,7 @@ import {
   TableBody,
   TableCaption,
   TableCell,
+  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -18,9 +19,11 @@ import { Button } from '../ui/button';
 
 type Props = {
   budgets: Budget[];
+  totalBudget?: number;
+  totalExpense?: number;
 };
 
-const TableComp = ({ budgets }: Props) => {
+const TableComp = ({ budgets, totalBudget, totalExpense }: Props) => {
   const th = ['Category', 'Budget', 'Expense', 'Edit', 'Delete'];
   const dispatch = useDispatch<AppDispatch>();
 
@@ -63,6 +66,16 @@ const TableComp = ({ budgets }: Props) => {
             </TableRow>
           ))}
         </TableBody>
+        <TableFooter className="bg-slate-200">
+          <TableRow>
+            <TableCell colSpan={2}>Total-Budget</TableCell>
+            <TableCell className="text-green-500">${totalBudget}</TableCell>
+          </TableRow>
+          <TableRow>
+            <TableCell colSpan={2}>Total-Expense</TableCell>
+            <TableCell className="text-red-500">${totalExpense}</TableCell>
+          </TableRow>
+        </TableFooter>
       </Table>
     </div>
   );

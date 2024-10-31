@@ -27,11 +27,10 @@ export function DialogDemo({ variant, placeholder, tripId, budget }: Props) {
   const [open, setOpen] = useState(false);
 
   const [budgetInfo, setBudgetInfo] = useState({
-    id: budget?.id,
     budget: budget?.budget || '',
     expense: budget?.expense || '',
     category: budget?.category || '',
-    tripId: tripId,
+    tripId: budget?.tripId || tripId,
   });
 
   const dispatch = useDispatch<AppDispatch>();
@@ -46,17 +45,17 @@ export function DialogDemo({ variant, placeholder, tripId, budget }: Props) {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (budget) {
-      dispatch(editBudget(budgetInfo));
+      dispatch(editBudget({ ...budgetInfo, id: budget.id }));
       setOpen(false);
       console.log('budgetInfo', budgetInfo);
     } else {
       dispatch(postBudget(budgetInfo));
+      console.log('budgetInfo', budgetInfo);
       setBudgetInfo({
-        id: '',
         budget: '',
         expense: '',
         category: '',
-        tripId: tripId,
+        tripId: tripId || budgetInfo.tripId || '',
       });
       setOpen(false);
     }
